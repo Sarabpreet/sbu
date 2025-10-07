@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Building Your First Offline Agent with Gemma 3</title>
+    <meta name="description" content="A presentation about creating offline AI agents using Google's Gemma 3 models and Ollama" />
+    <meta name="author" content="Sarabpreet Singh" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <style>
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        margin: 0;
+        padding: 40px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      
+      .container {
+        background: white;
+        border-radius: 20px;
+        padding: 60px;
+        box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        text-align: center;
+        max-width: 800px;
+      }
+      
+      h1 {
+        color: #333;
+        font-size: 3em;
+        margin-bottom: 20px;
+        background: linear-gradient(45deg, #667eea, #764ba2);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+      
+      .subtitle {
+        color: #666;
+        font-size: 1.2em;
+        margin-bottom: 40px;
+      }
+      
+      .nav-buttons {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      
+      .btn {
+        display: inline-block;
+        padding: 15px 30px;
+        background: linear-gradient(45deg, #667eea, #764ba2);
+        color: white;
+        text-decoration: none;
+        border-radius: 50px;
+        font-weight: 600;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
+      }
+      
+      .btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+      }
+      
+      .btn-secondary {
+        background: linear-gradient(45deg, #f093fb, #f5576c);
+      }
+      
+      .btn-secondary:hover {
+        box-shadow: 0 10px 25px rgba(240, 147, 251, 0.3);
+      }
+      
+      .features {
+        margin-top: 40px;
+        text-align: left;
+      }
+      
+      .features h3 {
+        color: #333;
+        margin-bottom: 20px;
+      }
+      
+      .features ul {
+        list-style: none;
+        padding: 0;
+      }
+      
+      .features li {
+        padding: 10px 0;
+        border-bottom: 1px solid #eee;
+        color: #666;
+      }
+      
+      .features li:before {
+        content: "🤖 ";
+        margin-right: 10px;
+      }
+      
+      @media (max-width: 768px) {
+        .container {
+          padding: 30px;
+          margin: 20px;
+        }
+        
+        h1 {
+          font-size: 2em;
+        }
+        
+        .nav-buttons {
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Building Your First Offline Agent with Gemma 3</h1>
+      <p class="subtitle">A comprehensive guide to creating AI agents that work without the cloud</p>
+      
+      <div class="nav-buttons">
+        <a href="sbu.html" class="btn">Start Presentation</a>
+        <a href="https://github.com/yourusername/presentation" class="btn btn-secondary" target="_blank">View on GitHub</a>
+      </div>
+      
+      <div class="features">
+        <h3>What You'll Learn:</h3>
+        <ul>
+          <li>Introduction to offline AI agents and their benefits</li>
+          <li>Setting up Google's Gemma 3 models locally</li>
+          <li>Using Ollama for local model management</li>
+          <li>Building custom AI agents with personality</li>
+          <li>Real-world applications and use cases</li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
