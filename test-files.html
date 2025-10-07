@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Test</title>
+</head>
+<body>
+    <h1>File Accessibility Test</h1>
+    <div id="results"></div>
+    
+    <script>
+        const files = [
+            'dist/reveal.css',
+            'dist/reveal.js',
+            'dist/theme/white.css',
+            'plugin/highlight/highlight.js',
+            'js/reveal.js',
+            'assets/common/gdg.png'
+        ];
+        
+        const results = document.getElementById('results');
+        
+        files.forEach(file => {
+            fetch(file)
+                .then(response => {
+                    const status = response.ok ? '✅' : '❌';
+                    results.innerHTML += `<p>${status} ${file} - ${response.status}</p>`;
+                })
+                .catch(error => {
+                    results.innerHTML += `<p>❌ ${file} - Error: ${error.message}</p>`;
+                });
+        });
+    </script>
+</body>
+</html>

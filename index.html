@@ -2,145 +2,721 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Building Your First Offline Agent with Gemma 3</title>
-    <meta name="description" content="A presentation about creating offline AI agents using Google's Gemma 3 models and Ollama" />
-    <meta name="author" content="Sarabpreet Singh" />
+
+    <title>Building Your First Offline - Agent with Gemma 3</title>
+
+    <meta
+      name="description"
+      content="A framework for easily creating beautiful presentations using HTML"
+    />
+    <meta name="author" content="Hakim El Hattab" />
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
-    <style>
-      body {
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-        margin: 0;
-        padding: 40px;
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        min-height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-      
-      .container {
-        background: white;
-        border-radius: 20px;
-        padding: 60px;
-        box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-        text-align: center;
-        max-width: 800px;
-      }
-      
-      h1 {
-        color: #333;
-        font-size: 3em;
-        margin-bottom: 20px;
-        background: linear-gradient(45deg, #667eea, #764ba2);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-      }
-      
-      .subtitle {
-        color: #666;
-        font-size: 1.2em;
-        margin-bottom: 40px;
-      }
-      
-      .nav-buttons {
-        display: flex;
-        gap: 20px;
-        justify-content: center;
-        flex-wrap: wrap;
-      }
-      
-      .btn {
-        display: inline-block;
-        padding: 15px 30px;
-        background: linear-gradient(45deg, #667eea, #764ba2);
-        color: white;
-        text-decoration: none;
-        border-radius: 50px;
-        font-weight: 600;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        border: none;
-        cursor: pointer;
-        font-size: 16px;
-      }
-      
-      .btn:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
-      }
-      
-      .btn-secondary {
-        background: linear-gradient(45deg, #f093fb, #f5576c);
-      }
-      
-      .btn-secondary:hover {
-        box-shadow: 0 10px 25px rgba(240, 147, 251, 0.3);
-      }
-      
-      .features {
-        margin-top: 40px;
-        text-align: left;
-      }
-      
-      .features h3 {
-        color: #333;
-        margin-bottom: 20px;
-      }
-      
-      .features ul {
-        list-style: none;
-        padding: 0;
-      }
-      
-      .features li {
-        padding: 10px 0;
-        border-bottom: 1px solid #eee;
-        color: #666;
-      }
-      
-      .features li:before {
-        content: "🤖 ";
-        margin-right: 10px;
-      }
-      
-      @media (max-width: 768px) {
-        .container {
-          padding: 30px;
-          margin: 20px;
-        }
-        
-        h1 {
-          font-size: 2em;
-        }
-        
-        .nav-buttons {
-          flex-direction: column;
-          align-items: center;
-        }
-      }
-    </style>
+
+    <link rel="stylesheet" href="dist/reset.css" />
+    <link rel="stylesheet" href="dist/reveal.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="dist/theme/white.css" id="theme" />
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css" />
   </head>
+
   <body>
-    <div class="container">
-      <h1>Building Your First Offline Agent with Gemma 3</h1>
-      <p class="subtitle">A comprehensive guide to creating AI agents that work without the cloud</p>
+    <div class="reveal">
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides">
+        <section>
+          <p>Building Your First Offline - Agent with Gemma 3</p>
+        </section>
+
+        <section>
+          <section>
+            <h3>Who am i ?</h3>
+          </section>
+
+          <section>
+            <img
+              width="20%"
+              src="https://sarabpreet.dev/_nuxt/sarabpreet-singh.m8XQOiHV.png"
+              alt=""
+            />
+            <p>Sarabpreet</p>
+          </section>
+
+          <section>
+            <p>The Tech Brains Behind</p>
+            <ul>
+              <img width="300px" src="./assets/common/common.png" />
+            </ul>
+          </section>
+
+          <section>
+            <h3>Former</h3>
+            <ul>
+              <li>Webmaster @ Manipal Academy of Higher Education</li>
+              <li>IT Lead @ Osam</li>
+              <li>LocalSay</li>
+              <li>Usho</li>
+            </ul>
+          </section>
+
+          <section>
+            <h3>Initiatives i back</h3>
+            <ul>
+              <li>Jharkhand Open Coffee Club</li>
+              <li>Code for Jharkhand</li>
+              <li>Ranchi Cycling Club</li>
+              <li>Google Developers Group</li>
+            </ul>
+          </section>
+
+          <section>
+            <p>Heads Up</p>
+            This presentation uses GIFs and short video clips, meme refferences for illustrative and educational purposes only, primarily to demonstrate the concepts of agent action, local inference, and speed.  
+
+          </section>
+        </section>
+        <section>
+          <section><h3>Why am i here?</h3></section>
+
+          <section
+            data-background-image="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExOHZjbzc3cTV2Z3hjODhnN2k3c3BoMzVpNWY4dnI4dzZhdG9sNXNkOCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/cBBFPp83IZ3B6/giphy.gif
+      "
+          >
+            <h3 style="color: white; text-shadow: 2px 2px 4px rgba(0,0,0,0.8), 0 0 10px rgba(0,0,0,0.5), 0 0 20px rgba(0,0,0,0.3)">For the love of <em>bots</em></h3>
+          </section>
+
+          <section>and</section>
+
+          <section>
+            <img width="300px" src="./assets/common/gdg.png" alt="" />
+          </section>
+
+          <section
+            data-background-image="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMDhrYnR0dWE3cHJwbWZieXl6ZGk4OW5uazd1cDh2Y3B2dDJ6cHVueCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/hK4rQg4xrtOFb0lbRf/giphy.gif
+		"
+          >
+            <!-- context slide -->
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h3>Bots & me.</h3>
+          </section>
+
+          <section>
+            <p>Build a bot that taunts 🥸</p>
+            <img src="./assets/common/bots-dhoni.png" alt="" />
+          </section>
+
+          <section
+            data-background-image="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExMTJrOTVwcDJlZjBtZnNjdm44YTF6cDVzdGwybmM4Ym9xejBjOHFjMSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l3fZTOPfzmcdPlek8/giphy.gif"
+          >
+            <p style="color: white">Basically a <em>(botpaglu)</em>.</p>
+          </section>
+        </section>
+        <section>
+          <section>
+            <p>the <em>Problem</em></p>
+          </section>
+
+          <section>
+            <p>the <em>Problem</em></p>
+            <ul>
+              <li>Latency: Constant round-trip time.</li>
+              <li>Cost: Per-token billing can become expensive.</li>
+              <li>Privacy/Security: Data leaves the local environment.</li>
+              <li>
+                Reliability: A dropped internet connection means a dead bot.
+              </li>
+            </ul>
+          </section>
+        </section>
+        <section>
+          <section data-background-image="../assets/common/solution.jpg">
+            <p style="color: white">the <em>souluchan?</em></p>
+          </section>
+          <section>
+            <p>Go Offline</p>
+          </section>
+
+          <section>
+            <p>Go Offline</p>
+
+            <p>
+                AI that is Private, Cost-Free, Low-Latency, and Always-On.
+            </p>
+            <p>
+                Moving from Cloud-Centric to Device-Centric AI. This enables true edge computing for generative AI.
+            </p>
+          
       
-      <div class="nav-buttons">
-        <a href="sbu.html" class="btn">Start Presentation</a>
-        <a href="https://github.com/yourusername/presentation" class="btn btn-secondary" target="_blank">View on GitHub</a>
-      </div>
+          </section>
+
+         
+
+          <section data-background-size="60%"
+          data-background-image="  https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNGd4NHNyMzUxeHhjZHk5cnk5dWVlamE0dTI5aGIza3o3ZGFnbzVqeiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/1xNCEgUt2zJJrJiHRn/giphy.gif">
+        </section>
+
+        </section>
+
+       
+ 
+
+        <section>
+                <section>
+                    <p>Introducing Gemma 3: The Edge Powerhouse</p>
+                </section>
+                <section>
+                    <p>What is Gemma 3?</p>
+                    <p>
+                         Google's latest family of open-weight, state-of-the-art models. 
+                    </p>
+                    <p>The "Why" for Offline: Gemma 3 is specifically designed for deployment on local devices. </p>
+                    <p>
+                        Parameter Sizes: Available in multiple sizes (e.g., 270M, 1B, 4B, 12B) to suit different hardware (from mobile devices to laptops/single-GPUs).	
+                    </p>
+                    <aside class="notes">
+                        Key Feature: Quantization-Aware Training (QAT) / Quantization: This significantly reduces the model's memory footprint (e.g., 4-bit quantization) while maintaining high performance, making it runnable on consumer hardware (e.g., a laptop GPU). Function Calling (for larger versions) enables agents to use external tools locally.
+                    </aside>
+                </section>
+                <section>
+
+                  <p>  The Power of Compact Models	</p>
+                    
+                  <p>
+                    It’s like having a very fast, dedicated personal assistant with perfect memory, not a general-purpose, cloud-connected super-genius.
+                  </p>
+
+                  <aside class="notes">
+                    These models are small enough to run on a laptop/Raspberry Pi. The Trade-off: We sacrifice the raw capability of a GPT-4, but gain total control, no cost, and 100% offline access. This is a perfect trade-off for domain-specific or personal assistants.</p>
+
+                  </aside>
+
+
+                </section>
+        </section>
+
+        <section
+        data-background-image="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExY2czdGVoY2hlOGdtbWh3dXY4ZXUzNnh4Zzk2em40c2s4bWkyMnU3eCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/5bivKwxhVzshNk2Rjw/giphy.gif
+        "
+      >
+        
+      <p style="color:#fff;">Thus, <em>Problem Solved.</em></p>
+
+    </section>
+
+     
+        <section>
+                <section>
+                    <p>The Key Components </p>
+                </section>
+                <section>
+                    <p>What is a bot?</p>
+
+                    <p>
+                        A bot is a program designed to perform a specific task, usually via a simple conversational interface (e.g., a chatbot answering FAQs). Limitation: Bots are typically reactive—they wait for a command and execute it.
+                    </p>
+
+                    <p>
+                        Reactive & State-less: User Input → LLM Call → Response (One-off conversation).
+                    </p>
+                    
+                </section>
+
+                <section>
+
+                    <p>What is an agent?</p>
+                    <aside class="notes">
+                     An AI Agent is a system that can reason, plan, and use tools to achieve a complex goal. 
+                     Agents are proactive—they can break down a goal, determine the steps, and execute them.</aside>
+                    <p>Proactive & Goal-Oriented: Goal → Reasoning/Planning → Tool Use → Action (Multi-step process, often with memory).</p>
+
+                </section>
+                <section>
+
+                 <p>   The Local Stack: Ollama	</p>
+
+
+                 <p> A powerful, user-friendly framework to download, run, and manage local LLMs.  It simplifies downloading and running quantized Gemma 3 models (e.g., ollama pull gemma3:4b).</p>
+ 
+                    <aside class="notes">
+                        Ollama is the essential runner for local LLMs. It packages the models, handles the complex setup, and provides a simple API endpoint (like a local, free, offline OpenAI). Ease of Use: It simplifies downloading and running quantized Gemma 3 models (e.g., ollama pull gemma3:4b).
+                    </aside>
+                    
+                </section>
+
+                <section>
+
+                    <p>Let's run Ollama!!</p>
+
+                    <a href="https://ollama.com/download/windows" target="_blank">  https://ollama.com/download/windows</a>
+                </section>
+                <section
+                data-background-image="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExY2czdGVoY2hlOGdtbWh3dXY4ZXUzNnh4Zzk2em40c2s4bWkyMnU3eCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/hNGPQK5eGDzTW/giphy.gif"
+              ></section>
+
+              
+        </section>
+
+        <section>
+
+            <section>
+                <p>Let's Build</p>
+            </section>
+
+            <section>
+                   <pre><code> ollama pull gemma3:4b → ollama run gemma3:4b </code> </pre>
+            </section>
+            <section data-background-size="60%"
+            data-background-image="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExY2czdGVoY2hlOGdtbWh3dXY4ZXUzNnh4Zzk2em40c2s4bWkyMnU3eCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/9058ZMj6ooluP4UUPl/giphy.gif"
+          ></section>
+
+            <section>
+
+                <p>System Prompt</p>
+                
+                <p>
+                  The core instruction that gives the bot its personality, tone, and knowledge constraints. This is what turns a generic LLM into a specific character/expert.	
+                </p>
+
+                
+
+
+            </section>
+
+            <section>
+                <p>Example?</p>
+
+                <div class="fragment">
+
+                    "You are 'Mr. Singh' a witty and slightly 'casual' AI practicioner. You must answer questions only about bots, AI, and memes. You always use a polite and encouraging tone and sign off with a cheerful salutation."
+
+                </div>
+            </section>
+
+            <section>
+
+                <p>The Custom Agent Modelfile</p>
+                <p class="fragment">
+                    Ollama uses a Modelfile to package the model and the custom system prompt. This creates a new, specific bot you can run. This is the key step in personalization.
+                </p>
+            </section>
+            <section>
+                <p>Full Snippet</p>
+                <pre>
+                    <code>
+# 1. Base Model: Choose a Gemma 3 variant that suits your hardware.
+#    'gemma3:4b' is a great balance of size and capability.
+#    Use 'gemma3:1b' if you have less RAM/VRAM.
+
+FROM gemma3:4b
+
+# 2. System Prompt: The soul of your bot. This defines its character, role, and constraints.
+SYSTEM """
+You are 'Mr. Singh' a witty and slightly 'casual' AI practicioner. You must answer questions only about bots, AI, and memes. You always use a polite and encouraging tone and sign off with a cheerful salutation.
+"""
+
+# 3. Parameters: Adjust the model's behavior for better character output.
+#    A lower temperature (0.3-0.5) makes the output more focused and consistent with the SYSTEM prompt.
+PARAMETER temperature 0.4
+#    This parameter helps prevent the model from going on too long and maintains a conversational feel.
+PARAMETER num_predict 256
+
+# 4. Template (Advanced): Gemma models often use a specific chat template.
+#    This ensures the SYSTEM and USER prompts are formatted correctly for the model.
+#    The official Gemma template from Ollama handles multi-turn conversation automatically.
+
+# By using the base model's default template, we ensure optimal performance.
+# However, for demonstration, here is the structure that Ollama will use to combine the parts:
+# TEMPLATE """
+# {{- range .Messages -}}
+# {{ .Content }}
+# {{- end -}}
+# """
+                    </code>
+                </pre>
+            </section>
+
+
+            
+            <section data-background-size="30%"
+            data-background-image="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExc3R0ZTQ4MGZyZnNwN2Yxa2h1ZjUxYzE3N3NzaW0xNWdkMGhra3ZhMCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/CjmvTCZf2U3p09Cn0h/giphy.gif"
+          ></section>
+
+
+            <section>
+
+                <p>Deploy 🚀</p>
+
+<p>
+    Run the newly created character model. The entire process—the model, the personality, the inference—is now running 100% locally and offline via the Ollama API or CLI.
+
+</p>           
+
+<pre>  <code> ollama create mr-singh -f Modelfile </code>
+
+                    
+</pre>
+
+            </section>
+
+        </section>
+
+
+        <section>
+
+    <section>
+        <p> What we covered?</p>
+
+        <p>
+            We successfully moved a powerful, state-of-the-art model (Gemma 3) out of the cloud and into a local, private environment using Ollama, transforming it into a personalized Agent-Bot.
+        </p>
+        
+
+    </section>
+
+    <section>
+        <p>
+         What's Next?
+        </p>
+        
+        <p class="fragment">AI Agent in Action</p>
+
+        <a href="https://madeinranchi.com" target="_blank" class="fragment">Visit Made In Ranchi</a>
+     </section>
+
+     
+		<section>
+			<h1>How it works?</h1>
+			<ul>
+				<li>scrap and clean (mix of logic and code)</li>
+				<li>once done, convert it into your language <em>eg. English</em></li>
+				<li>format & post</li>
+			</ul>
+		</section>
+
+        <section>
+
+            <p>Further Ideas</p>
+           
+            <ul>
+                <li>
+                    Personal Productivity: A private, uncensored journaling or mind-mapping assistant. 
+                </li>
+                <li>Field Operations: Maintenance manuals and troubleshooting in remote areas.</li>
+                <li>Education: Personalized, offline tutoring or study-guide generation.</li>
+                <li>
+                    Gaming/NPCs: Complex, dynamic character dialogue.
+                </li>
+            </ul>
+          
+
+
+        </section>
+
+        </section>
+
       
-      <div class="features">
-        <h3>What You'll Learn:</h3>
-        <ul>
-          <li>Introduction to offline AI agents and their benefits</li>
-          <li>Setting up Google's Gemma 3 models locally</li>
-          <li>Using Ollama for local model management</li>
-          <li>Building custom AI agents with personality</li>
-          <li>Real-world applications and use cases</li>
-        </ul>
+
+        <section>
+            <p>Questions?</p>
+            <img class="fragment" src="https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3cTU0cjB0dHEwM3owNm1wNzAzcnIwbXg1cnBrYnoyZGdpZTJkM3lueiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/Y1kzHHW7qU2w1dFSsb/giphy.gif" alt="">
+        </section>
+        
+        <section>
+          <h3>Let's connect</h3>
+
+          <ul>
+            <li>vist me at sarabpreet.dev</li>
+            <li>@saarabpreet</li>
+          </ul>
+        </section>
+        <section data-background-size="800px"
+          data-background-image="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExaGhnNmtjd3hzcTZmZThpaHpkODU5MzJqcWR4azB4cXN1d29ud2t6dSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/5xtDarmwsuR9sDRObyU/giphy.gif
+	"
+        ></section>
+
+        <section data-visibility="hidden">
+          <h2>Hidden Slides</h2>
+          <p>
+            This slide is visible in the source, but hidden when the
+            presentation is viewed. You can show all hidden slides by setting
+            the `showHiddenSlides` config option to `true`.
+          </p>
+        </section>
+
+        <section data-visibility="hidden">
+          <h2>Lightbox</h2>
+          Turn any element into a
+          <a href="https://revealjs.com/lightbox/">lightbox</a> using
+          <strong>data‑preview‑image</strong> &
+          <strong>data‑preview‑video</strong>.
+          <div class="r-hstack" style="gap: 2rem">
+            <div>
+              <pre
+                style="font-size: 12px; width: 100%"
+              ><code class="html" data-trim>
+								&lt;img src="image.png" data-preview-image="image.png"&gt;
+							</code></pre>
+              <img
+                src="https://static.slid.es/logo/v2/slides-symbol-1024x1024.png"
+                height="100"
+                data-preview-image
+              />
+            </div>
+            <div>
+              <pre
+                style="font-size: 12px; width: 100%"
+              ><code class="html" data-trim>
+								&lt;img src="video.png" data-preview-video="video.mp4"&gt;
+							</code></pre>
+              <img
+                src="https://static.slid.es/site/homepage/v1/homepage-video-editor.png"
+                height="100"
+                data-preview-video="https://static.slid.es/site/homepage/v1/homepage-video-editor.mp4"
+              />
+            </div>
+          </div>
+        </section>
+
+        <section data-visibility="hidden">
+          <p>Add the <code>r-fit-text</code> class to auto-size text</p>
+          <h2 class="r-fit-text">FIT TEXT</h2>
+        </section>
+
+        <section data-visibility="hidden">
+          <section id="fragments">
+            <h2>Fragments</h2>
+            <p>Hit the next arrow...</p>
+            <p class="fragment">... to step through ...</p>
+            <p>
+              <span class="fragment">... a</span>
+              <span class="fragment">fragmented</span>
+              <span class="fragment">slide.</span>
+            </p>
+
+            <aside class="notes">
+              This slide has fragments which are also stepped through in the
+              notes window.
+            </aside>
+          </section>
+          <section data-visibility="hidden">
+            <h2>Fragment Styles</h2>
+            <p>There's different types of fragments, like:</p>
+            <p class="fragment grow">grow</p>
+            <p class="fragment shrink">shrink</p>
+            <p class="fragment fade-out">fade-out</p>
+            <p>
+              <span style="display: inline-block" class="fragment fade-right"
+                >fade-right,
+              </span>
+              <span style="display: inline-block" class="fragment fade-up"
+                >up,
+              </span>
+              <span style="display: inline-block" class="fragment fade-down"
+                >down,
+              </span>
+              <span style="display: inline-block" class="fragment fade-left"
+                >left</span
+              >
+            </p>
+            <p class="fragment fade-in-then-out">fade-in-then-out</p>
+            <p class="fragment fade-in-then-semi-out">fade-in-then-semi-out</p>
+            <p>
+              Highlight <span class="fragment highlight-red">red</span>
+              <span class="fragment highlight-blue">blue</span>
+              <span class="fragment highlight-green">green</span>
+            </p>
+          </section>
+        </section>
+
+        <section data-visibility="hidden">
+          <h2>Transition Styles</h2>
+          <p>
+            You can select from different transitions, like: <br />
+            <a href="?transition=none#/transitions">None</a> -
+            <a href="?transition=fade#/transitions">Fade</a> -
+            <a href="?transition=slide#/transitions">Slide</a> -
+            <a href="?transition=convex#/transitions">Convex</a> -
+            <a href="?transition=concave#/transitions">Concave</a> -
+            <a href="?transition=zoom#/transitions">Zoom</a>
+          </p>
+        </section>
+
+        <section data-visibility="hidden">
+          <h2>Themes</h2>
+          <p>
+            reveal.js comes with a few themes built in: <br />
+            <!-- Hacks to swap themes after the page has loaded. Not flexible and only intended for the reveal.js demo deck. -->
+            <a
+              href="#/themes"
+              onclick="document.getElementById('theme').setAttribute('href','dist/theme/black.css'); return false;"
+              >Black (default)</a
+            >
+            -
+            <a
+              href="#/themes"
+              onclick="document.getElementById('theme').setAttribute('href','dist/theme/white.css'); return false;"
+              >White</a
+            >
+            -
+            <a
+              href="#/themes"
+              onclick="document.getElementById('theme').setAttribute('href','dist/theme/league.css'); return false;"
+              >League</a
+            >
+            -
+            <a
+              href="#/themes"
+              onclick="document.getElementById('theme').setAttribute('href','dist/theme/sky.css'); return false;"
+              >Sky</a
+            >
+            -
+            <a
+              href="#/themes"
+              onclick="document.getElementById('theme').setAttribute('href','dist/theme/beige.css'); return false;"
+              >Beige</a
+            >
+            -
+            <a
+              href="#/themes"
+              onclick="document.getElementById('theme').setAttribute('href','dist/theme/simple.css'); return false;"
+              >Simple</a
+            >
+            <br />
+            <a
+              href="#/themes"
+              onclick="document.getElementById('theme').setAttribute('href','dist/theme/serif.css'); return false;"
+              >Serif</a
+            >
+            -
+            <a
+              href="#/themes"
+              onclick="document.getElementById('theme').setAttribute('href','dist/theme/blood.css'); return false;"
+              >Blood</a
+            >
+            -
+            <a
+              href="#/themes"
+              onclick="document.getElementById('theme').setAttribute('href','dist/theme/night.css'); return false;"
+              >Night</a
+            >
+            -
+            <a
+              href="#/themes"
+              onclick="document.getElementById('theme').setAttribute('href','dist/theme/moon.css'); return false;"
+              >Moon</a
+            >
+            -
+            <a
+              href="#/themes"
+              onclick="document.getElementById('theme').setAttribute('href','dist/theme/solarized.css'); return false;"
+              >Solarized</a
+            >
+          </p>
+        </section>
+
+        <section data-visibility="hidden">
+          <section data-background="#dddddd">
+            <h2>Slide Backgrounds</h2>
+            <p>
+              Set <code>data-background="#dddddd"</code> on a slide to change
+              the background color. All CSS color formats are supported.
+            </p>
+            <a href="#" class="navigate-down">
+              <img
+                class="r-frame"
+                style="background: rgba(255, 255, 255, 0.1)"
+                width="178"
+                height="238"
+                data-src="https://static.slid.es/reveal/arrow.png"
+                alt="Down arrow"
+              />
+            </a>
+          </section>
+          <section
+            data-background-gradient="linear-gradient(to bottom, #283b95, #17b2c3)"
+          >
+            <h2>Gradient Backgrounds</h2>
+            <pre><code class="hljs html wrap">&lt;section data-background-gradient=
+							"linear-gradient(to bottom, #ddd, #191919)"&gt;</code></pre>
+          </section>
+          <section
+            data-background="https://static.slid.es/reveal/image-placeholder.png"
+          >
+            <h2>Image Backgrounds</h2>
+            <pre><code class="hljs html">&lt;section data-background="image.png"&gt;</code></pre>
+          </section>
+          <section
+            data-background="https://static.slid.es/reveal/image-placeholder.png"
+            data-background-repeat="repeat"
+            data-background-size="100px"
+          >
+            <h2>Tiled Backgrounds</h2>
+            <pre><code class="hljs html" style="word-wrap: break-word;">&lt;section data-background="image.png" data-background-repeat="repeat" data-background-size="100px"&gt;</code></pre>
+          </section>
+          <section
+            data-background-video="https://static.slid.es/site/homepage/v1/homepage-video-editor.mp4"
+            data-background-color="#000000"
+          >
+            <div
+              style="
+                background-color: rgba(0, 0, 0, 0.9);
+                color: #fff;
+                padding: 20px;
+              "
+            >
+              <h2>Video Backgrounds</h2>
+              <pre><code class="hljs html" style="word-wrap: break-word;">&lt;section data-background-video="video.mp4,video.webm"&gt;</code></pre>
+            </div>
+          </section>
+          <section data-background="http://i.giphy.com/90F8aUepslB84.gif">
+            <h2>... and GIFs!</h2>
+          </section>
+        </section>
       </div>
     </div>
+
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/zoom/zoom.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/search/search.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script>
+      // Also available as an ES module, see:
+      // https://revealjs.com/initialization/
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        center: true,
+        hash: true,
+
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [
+          RevealZoom,
+          RevealNotes,
+          RevealSearch,
+          RevealMarkdown,
+          RevealHighlight,
+        ],
+      });
+    </script>
   </body>
 </html>

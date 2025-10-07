@@ -1,0 +1,9 @@
+# Netlify redirects file
+/dist/* /dist/:splat 200
+/plugin/* /plugin/:splat 200
+/js/* /js/:splat 200
+/css/* /css/:splat 200
+/assets/* /assets/:splat 200
+
+# Fallback for SPA
+/* /index.html 200
