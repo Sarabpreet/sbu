@@ -7,11 +7,11 @@
   "main": "dist/reveal.js",
   "module": "dist/reveal.esm.js",
   "license": "MIT",
-  "scripts": {
-    "test": "gulp test",
-    "start": "gulp serve",
-    "build": "gulp build"
-  },
+  // "scripts": {
+  //   "test": "gulp test",
+  //   "start": "gulp serve",
+  //   "build": "gulp build"
+  // },
   "author": {
     "name": "Hakim El Hattab",
     "email": "hakim.elhattab@gmail.com",
